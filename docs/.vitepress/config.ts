@@ -58,6 +58,13 @@ export default defineConfig({
   // Enable dark mode by default
   appearance: "dark",
 
+  // Vite configuration for SSR compatibility
+  vite: {
+    ssr: {
+      noExternal: ["vitepress-carbon"],
+    },
+  },
+
   // Site metadata
   head: [
     ["meta", { name: "author", content: "Enrico Lionello" }],
